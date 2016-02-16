@@ -2,10 +2,10 @@
 
 var seminaryServices= angular.module('seminaryServices', []);
 
-seminaryServices.factory("seminaryDataService", ['$firebaseArray', '$q', '$window',
-  function($firebaseArray, $q, $window) {
-	var ref = new Firebase("https://seminary.firebaseio.com/lessons");
-	var lessons = JSON.parse($window.localStorage.getItem("seminarylessons")) ||  [] ;
+seminaryServices.factory("seminaryDataService", ['$firebaseArray', '$q',
+  function($firebaseArray, $q) {
+	var ref = new Firebase("https://seminary.firebaseio.com/lessons/ottm/");
+	var lessons = [] ;
 	return{
 	    getData: function(){
 	    	// Creating a deferred object
@@ -14,10 +14,7 @@ seminaryServices.factory("seminaryDataService", ['$firebaseArray', '$q', '$windo
 
 				var lessonsData = $firebaseArray(ref);
 				lessonsData.$loaded().then(function(data) {
-
-					
-					// store locally to avoid database hit
-				    $window.localStorage.setItem("seminarylessons", JSON.stringify(lessons));
+				    lessons = data;
 				    deferred.resolve(data);
 				})
 				.catch(function(error) {
@@ -27,11 +24,16 @@ seminaryServices.factory("seminaryDataService", ['$firebaseArray', '$q', '$windo
 				deferred.resolve(lessons);
 			}
 			return deferred.promise;
-	    },
-	    findById: function(id) {
-	    	if (lessons.length > 0) {
-	    		return lessons.reduce(function(a, b){return (a.$id===id && a) || (b.$id === id && b);});
-	    	}
 	    }
     };
+}]);
+
+seminaryServices.factory("Lesson", ["$firebaseObject",
+  function($firebaseObject) {
+    return function(lessonId) {
+        var ref = new Firebase("https://seminary.firebaseio.com/lessons/ottm");//TODO add support for all four manuals
+        var lessonRef = ref.child(lessonId);
+        
+        return $firebaseObject(lessonRef);
+    };    
 }]);

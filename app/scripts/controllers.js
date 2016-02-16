@@ -22,22 +22,13 @@ seminaryControllers.controller("SeminaryIndexController", ['$scope',
 
 seminaryControllers.controller("LessonListController", ['$scope', 'seminaryDataService',
   function($scope, seminaryDataService) {
-	$scope.lessons = [];
 	seminaryDataService.getData().then(function(data){
 	    $scope.lessons = data;
 	});
 }]);
 
-seminaryControllers.controller("LessonDetailController", ['$scope', '$routeParams', 'seminaryDataService',
-  function($scope, $routeParams, seminaryDataService) {
+seminaryControllers.controller("LessonDetailController", ['$scope', '$routeParams', 'Lesson',
+  function($scope, $routeParams, Lesson) {
 	var lessonId = $routeParams.lessonId;
-	$scope.thisLesson = {};
-	$scope.lessons = [];
-
-	seminaryDataService.getData().then(function(data){
-	    $scope.lessons = data;
-		//identify this lesson based on lessonId
-		$scope.thisLesson = lessonId ? seminaryDataService.findById(lessonId) : {};
-	});
-
+	new Lesson(lessonId).$bindTo($scope, "lesson");
 }]);
