@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:ng="http://angularjs.org" data-ng-app=seminaryApp class="ng-scope" manifest="cache.manifest">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Students of Seminary App</title>
+<!-- build:css styles/vendor.css -->
+<!-- bower:css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- Custom theme -->
+<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body role="document">
+<!--   <div class="container"> -->
+<!--     <a href="#/seminary-index">Home</a> -->
+<!--   </div> -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand visible-xs-inline" href="#/seminary-index">Home</a>
+      </div>
+
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#/seminary-index">Home</a></li>
+          <li><a href="#/lessons">Lessons</a></li>
+          <!-- <li><a href="https://github.com/realgt/seminary"><i class="glyphicon glyphicon-cloud" aria-hidden="true">&nbsp;</i>Fork on Github</a> -->
+
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div data-ng-view data-autoscroll></div>
+
+
+  <footer class="navbar-default clearfix">
+    <div class="container">
+      <div class="row clearfix">
+        <p class="text-center small-text">
+          <a href="mailto:seminary@realgt.com">Feedback</a>
+          |
+          <a href="http://ottm.lds.org" target="_blank">Old Testament Manual</a>
+        </p>
+        <p class="text-center small-text">
+          <a href="https://twitter.com/soseminary" target="_blank" title="Students of Seminary on Twitter">
+            <img src="images/twitter.png">
+          </a>
+          <a href="https://instagram.com/studentsofseminary/" target="_blank" title="Students of Seminary on Instagram">
+            <img src="images/instagram.png">
+          </a>
+        </p>
+        <p class="text-center small-text">© Students of Seminary 2016</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+
+  <!-- App -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers.js"></script>
+  <script src="scripts/services.js"></script>
+</body>
+</html>
