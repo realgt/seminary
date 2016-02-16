@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#REV 1
+#REV 3
 
 index.html
 views/lesson-detail.html
@@ -17,6 +17,8 @@ scripts/vendor.js
 
 images/twitter.png
 images/instagram.png
+images/logo.png
+images/logo-desktop.png
 
 fonts/glyphicons-halflings-regular.woff2
 fonts/glyphicons-halflings-regular.woff

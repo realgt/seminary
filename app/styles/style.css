@@ -32,17 +32,10 @@ button, .btn, .btn-default {
 	color: white;
 }
 
-.top-vehicle-info, .vehicle-title {
-	color: #0678BC;
-}
-
 dt {
 	color: #0678BC;
 }
 
-.top-vehicle-info .vehicle-info {
-	font-size: 1.2em;
-}
 .dashed-hr {
 	width: 75%;
 	margin: 80px auto;
@@ -60,30 +53,6 @@ dt {
 
 footer .small-text {
     font-size: 7pt;
-}
-
-.fuel-economy-label img {
-	padding-top: 10px;
-}
-.fuel-economy-label .mpgLabel {
-	font-size: 2em;
-	font-weight: bold;
-}
-
-.fuel-economy-label .mpgLabelSup {
-	line-height: 2.3em;
-  vertical-align: top;
-  font-weight: bold;
-}
-
-.fuel-economy-label .cityMpg {
-	top: -65px;
-  right: 50px;
-}
-
-.fuel-economy-label .hwyMpg {
-	top: -65px;
-  right: 20px;
 }
 
 .margin-top-zero {
@@ -117,18 +86,25 @@ input, button {
 	position: absolute;
 }
 
-.annualFuelCost h1, .annualFuelSavings h1 {
-	margin: 0;
-	font-size: 5em;
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 130px;
 }
 
-.annualFuelCost h2 strong, .annualFuelSavings h2 strong{
-	font-size: 1.7em;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 130px;
+  background-color: #f5f5f5;
 }
 
-.annualFuelSavings .subheading {
-	margin-left: 8em;
-}
+
 
 /** CUSTOMIZED NAVBAR STYLES **/
 
