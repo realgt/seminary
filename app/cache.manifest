@@ -7,7 +7,7 @@ views/seminary-index.html
 views/lesson-list.html
 
 styles/style.css
-styles/bootstrap.min.css
+styles/vendor.css
 
 
 scripts/app.js
