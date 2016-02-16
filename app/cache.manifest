@@ -12,15 +12,8 @@ styles/bootstrap.min.css
 
 scripts/app.js
 scripts/controllers.js
-scripts/services.js
-scripts/angularfire.min.js
-scripts/angular.min.js
-scripts/firebase.js
-scripts/angularfire.min.js
-scripts/jquery.min.js
-scripts/bootstrap.min.js
-scripts/angular-filter.min.js
-scripts/angular-route.min.js
+scripts/services.js.
+scripts/vendor.js
 
 images/twitter.png
 images/instagram.png
