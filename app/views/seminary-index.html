@@ -5,10 +5,15 @@
    <img class="hero-desktop img-responsive center-block" src="images/logo-desktop.png" />
  </div>
 <div class="container">
-	<div class="row text-center center-block">
+	<div class="row text-center center-block clearfix">
 <!--         <button class="btn btn-default" data-ng-click="login()">Login with Google</button> -->
-        <input data-ng-model="lessonId" placeholder="Enter Lesson #"></input>
-        <a class="btn btn-default" data-ng-href="#/lessons/{{lessonId}}">Open Lesson</a>
+        <form class="form-inline">
+            <div class="form-group">
+             <input class="form-control" data-ng-model="lessonId" placeholder="Enter Lesson #"></input>
+             <a class="btn btn-default" data-ng-href="#/lessons/{{lessonId}}">Open Lesson</a>
+            </div>
+        </form>
     </div>
+    <br clear="all">
 </div>
 

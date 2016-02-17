@@ -10,7 +10,7 @@ footer a {
 }
 
 footer a:focus, a:hover {
-	color: #96c93f;
+	color: #E6E6E6;
 }
 
 button, .btn, .btn-default {
@@ -128,7 +128,7 @@ footer {
   color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #96c93f;
+  color: #E6E6E6;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu {
   background-color: #500200;
