@@ -1,9 +1,9 @@
-<div class="container" >
+<div class="container">
 	<h1>Lessons</h1>
 	
 
 	<div data-ng-controller="LessonListController">
-	  <div class="row clearfix" data-ng-repeat="lesson in lessons | limitTo: 10 | reverse">
+	  <div class="clearfix" data-ng-repeat="lesson in lessons | limitTo: 10 | reverse">
         <a data-ng-href="#/lessons/{{lesson.$id}}"><h4>Lesson #{{lesson.$id}} <small>{{lesson.identifyDoctrine}}</small></h4></a>
 	  </div>
 	</div>
