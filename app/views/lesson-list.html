@@ -2,7 +2,7 @@
 	<h1>Lessons</h1>
 	<div>
 	  <div class="clearfix" data-ng-repeat="lesson in lessons | limitTo: 10 | reverse">
-        <a data-ng-href="#/lessons/{{lesson.$id}}"><h4>Lesson #{{lesson.$id}} <small>{{lesson.team}} <em>{{lesson.date}}</em></small></h4></a>
+        <h4><a data-ng-href="#/lessons/{{lesson.$id}}"><small><em>{{lesson.date}}</em></small> Lesson #{{lesson.$id}} <small>Team {{lesson.team}}</small></a></h4>
         <h5>{{lesson.identifyDoctrine}}</h5>
 	  </div>
 	</div>	
