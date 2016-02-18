@@ -15,5 +15,11 @@
         </form>
     </div>
     <br clear="all">
+    <div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="" frameborder="0" height="400" src="https://www.youtube.com/embed/videoseries?list=PLQUCTI9_QLkzs_GEulF2OV_06nDlH_BeO;rel=0;autoplay=0;showinfo=0;controls=1" width="747"></iframe></div>
+    <h2><a href="#/lessons">Lessons</a></h2>
+    <div class="clearfix" data-ng-repeat="lesson in lessons | reverse | limitTo: 5">
+        <a data-ng-href="#/lessons/{{lesson.$id}}"><h4>Lesson #{{lesson.$id}} <small>{{lesson.team}} <em>{{lesson.date}}</em></small></h4></a>
+        <h5>{{lesson.identifyDoctrine}}</h5>
+    </div>
 </div>
 

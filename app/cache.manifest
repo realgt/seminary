@@ -5,6 +5,8 @@ index.html
 views/lesson-detail.html
 views/seminary-index.html
 views/lesson-list.html
+views/team-list.html
+views/team-detail.html
 
 styles/style.css
 styles/vendor.css
@@ -19,6 +21,7 @@ images/twitter.png
 images/instagram.png
 images/logo.png
 images/logo-desktop.png
+images/youtube.png
 
 fonts/glyphicons-halflings-regular.woff2
 fonts/glyphicons-halflings-regular.woff

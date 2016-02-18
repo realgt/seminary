@@ -2,8 +2,8 @@
 
 var seminaryControllers = angular.module('seminaryControllers', []);
 
-seminaryControllers.controller("SeminaryIndexController", ['$scope', 
-  function($scope) {
+seminaryControllers.controller("SeminaryIndexController", ['$scope', 'seminaryDataService',
+  function($scope, seminaryDataService) {
 
    $scope.login = function() {
        var ref = new Firebase("https://seminary.firebaseio.com");
@@ -16,6 +16,9 @@ seminaryControllers.controller("SeminaryIndexController", ['$scope',
        });
    };
 
+   seminaryDataService.getData().then(function(data){
+       $scope.lessons = data;
+   });
 
 }]);
 seminaryControllers.controller("TeamListController", ['$scope', 'seminaryDataService',
