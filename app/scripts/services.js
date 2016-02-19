@@ -5,14 +5,17 @@ var seminaryServices= angular.module('seminaryServices', []);
 seminaryServices.factory("seminaryDataService", ['$firebaseArray', '$q',
   function($firebaseArray, $q) {	
 	return{
-	    getData: function(){
-	        var ref = new Firebase("https://seminary.firebaseio.com/lessons/ottm/");
+	    getData: function(daysOffset){
+	        var offsetDays = daysOffset || 0;
+	        var offset = 86400000 * offsetDays;
+	        var ref = new Firebase("https://seminary.firebaseio.com/courses/ottm/term/2/Days");
+	        
 	        var lessons = [] ;
 	    	// Creating a deferred object
 	        var deferred = $q.defer();
 			if (lessons.length === 0) {
 
-				var lessonsData = $firebaseArray(ref);
+				var lessonsData = $firebaseArray(ref.orderByChild("Date").startAt(new Date().getTime() - offset));
 				lessonsData.$loaded().then(function(data) {
 				    lessons = data;
 				    deferred.resolve(data);
@@ -61,7 +64,7 @@ seminaryServices.factory("Team", ["$firebaseObject",
 seminaryServices.factory("Lesson", ["$firebaseObject",
   function($firebaseObject) {
     return function(lessonId) {
-        var ref = new Firebase("https://seminary.firebaseio.com/lessons/ottm");//TODO add support for all four manuals
+        var ref = new Firebase("https://seminary.firebaseio.com/courses/ottm/term/2/Days");//TODO add support for all four manuals
         var lessonRef = ref.child(lessonId);
         
         return $firebaseObject(lessonRef);

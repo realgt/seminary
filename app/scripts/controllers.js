@@ -16,7 +16,7 @@ seminaryControllers.controller("SeminaryIndexController", ['$scope', 'seminaryDa
        });
    };
 
-   seminaryDataService.getData().then(function(data){
+   seminaryDataService.getData(0).then(function(data){
        $scope.lessons = data;
    });
 
@@ -35,7 +35,7 @@ seminaryControllers.controller("TeamDetailController", ['$scope', '$routeParams'
 
 seminaryControllers.controller("LessonListController", ['$scope', 'seminaryDataService',
   function($scope, seminaryDataService) {
-	seminaryDataService.getData().then(function(data){
+	seminaryDataService.getData(5).then(function(data){
 	    $scope.lessons = data;
 	});
 }]);

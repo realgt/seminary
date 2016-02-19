@@ -1,9 +1,13 @@
 <div class="container">
 	<h1>Lessons</h1>
 	<div>
-	  <div class="clearfix" data-ng-repeat="lesson in lessons | limitTo: 10 | reverse">
-        <h4><a data-ng-href="#/lessons/{{lesson.$id}}"><small><em>{{lesson.date}}</em></small> Lesson #{{lesson.$id}} <small>Team {{lesson.team}}</small></a></h4>
-        <h5>{{lesson.identifyDoctrine}}</h5>
+	  <div class="clearfix" data-ng-repeat="lesson in lessons ">
+        <h4>
+            <small><em>{{lesson.DateDisplay}}</em></small> 
+            <span data-ng-if="!lesson.Number">Scripture Mastery</span>
+            <a data-ng-if="lesson.Number" data-ng-href="#/lessons/{{lesson.$id}}">Lesson #{{lesson.Number}}<small> {{lesson.Title}}</small></a>
+        </h4>
+        <h5><span data-ng-if="lesson.team">Team {{lesson.team}} - </span> {{lesson.identifyDoctrine}}</h5>
 	  </div>
 	</div>	
 </div>
