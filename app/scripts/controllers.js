@@ -19,6 +19,15 @@ seminaryControllers.controller("SeminaryIndexController", ['$scope', 'seminaryDa
    seminaryDataService.getData(0).then(function(data){
        $scope.lessons = data;
    });
+   
+   $scope.weekday = new Array(7);
+   $scope.weekday[0]=  "Sun";
+   $scope.weekday[1] = "Mon";
+   $scope.weekday[2] = "Tue";
+   $scope.weekday[3] = "Wed";
+   $scope.weekday[4] = "Thu";
+   $scope.weekday[5] = "Fri";
+   $scope.weekday[6] = "Sat";
 
 }]);
 seminaryControllers.controller("TeamListController", ['$scope', 'seminaryDataService',
@@ -35,9 +44,18 @@ seminaryControllers.controller("TeamDetailController", ['$scope', '$routeParams'
 
 seminaryControllers.controller("LessonListController", ['$scope', 'seminaryDataService',
   function($scope, seminaryDataService) {
-	seminaryDataService.getData(5).then(function(data){
+    seminaryDataService.getData(5).then(function(data){
 	    $scope.lessons = data;
 	});
+	
+	$scope.weekday = new Array(7);
+    $scope.weekday[0]=  "Sun";
+    $scope.weekday[1] = "Mon";
+    $scope.weekday[2] = "Tue";
+    $scope.weekday[3] = "Wed";
+    $scope.weekday[4] = "Thu";
+    $scope.weekday[5] = "Fri";
+    $scope.weekday[6] = "Sat";
 }]);
 
 seminaryControllers.controller("LessonDetailController", ['$scope', '$routeParams', 'Lesson', 'seminaryDataService',
