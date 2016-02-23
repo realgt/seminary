@@ -14,7 +14,7 @@
     <div class="clearfix" data-ng-repeat="lesson in lessons | limitTo: 5">
         <div class="row">
         <div class="col-xs-2 col-md-1">
-            <span data-ng-if="!lesson.Number"><img class="scripture-mastery" src="images/scripture-mastery.jpg"></span>
+            <span data-ng-if="!lesson.Number"><img class="app-icon" src="images/scripture-mastery.jpg"></span>
             <div data-ng-if="lesson.Number" class="circle"><a data-ng-href="#/lessons/{{lesson.$id}}">{{lesson.Number}}</a></div>
         </div>
         <div class="col-xs-10 col-md-11">

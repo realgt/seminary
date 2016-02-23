@@ -16,7 +16,7 @@ seminaryControllers.controller("SeminaryIndexController", ['$scope', 'seminaryDa
        });
    };
 
-   seminaryDataService.getData(0).then(function(data){
+   seminaryDataService.getData(0.3).then(function(data){
        $scope.lessons = data;
    });
    

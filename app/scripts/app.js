@@ -31,6 +31,9 @@ seminaryApp.config(['$routeProvider',
             templateUrl: 'views/team-detail.html',
             controller: 'TeamDetailController'
         }).
+        when('/help', {
+            templateUrl: 'views/help.html'
+        }).
 		when('/index', {
 			templateUrl: 'views/seminary-index.html',
 			controller: 'SeminaryIndexController'
