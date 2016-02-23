@@ -18,5 +18,5 @@ A mobile web app for my LDS Seminary students.
 
 <a href="http://jasmine.github.io"><img height="100" src="https://camo.githubusercontent.com/d3afdfc8b8075b9daf5109c4af7b8b07ab2d7c04/68747470733a2f2f7261776769746875622e636f6d2f6a61736d696e652f6a61736d696e652f6d61737465722f696d616765732f6a61736d696e652d686f72697a6f6e74616c2e737667"></a>
 
-<a href="http://karma-runner.github.io/"><img height="100" src="https://camo.githubusercontent.com/e776dd5ec85da8c5deada5502d3613a36b90aad9/687474703a2f2f6b61726d612d72756e6e65722e6769746875622e696f2f6173736574732f696d672f62616e6e65722e706e67"></a>
+<a href="http://karma-runner.github.io/"><img src="https://camo.githubusercontent.com/e776dd5ec85da8c5deada5502d3613a36b90aad9/687474703a2f2f6b61726d612d72756e6e65722e6769746875622e696f2f6173736574732f696d672f62616e6e65722e706e67"></a>
 
