@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/realgt/seminary.svg?branch=master)](https://travis-ci.org/realgt/seminary)
 
-A mobile web app for my LDS Seminary students. 
+A mobile web app for students of my LDS Seminary class. 
 
 
 ## Technology Stack
