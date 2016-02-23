@@ -5,7 +5,7 @@
 A mobile web app for my LDS Seminary students. 
 
 
-##Technology Stack
+## Technology Stack
 <a href="https://angularjs.org/"><img height="100" src="https://camo.githubusercontent.com/1e69ab49e036e577d4c651ebe8a7e43c95fb34a3/68747470733a2f2f616e67756c61726a732e6f72672f696d672f416e67756c61724a532d6c617267652e706e67"></a>
 
 <a href="https://www.firebase.com/"><img height="100" src="https://camo.githubusercontent.com/71219ab5a90a68c77aeb1f39a0c9dff9001fc3e6/68747470733a2f2f6d656469612e6c6963646e2e636f6d2f6d656469612f702f372f3030302f3165312f3264332f303030383130652e706e67"></a>
