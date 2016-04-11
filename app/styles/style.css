@@ -32,6 +32,14 @@ button, .btn, .btn-default {
 	color: white;
 }
 
+.glyphicon-star-empty {
+    color: lightgrey;
+}
+
+.gold {
+    color: gold;
+}
+
 /* dt { */
 /* 	color: #0678BC; */
 /* } */

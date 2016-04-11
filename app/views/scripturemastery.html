@@ -1,0 +1,83 @@
+<div class="container">
+	<h1>Scripture Mastery</h1>
+    <div class="clearfix">
+	   <div class="row">
+        <table class="table table-striped table-responsive table-condensed">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Roger <br><i class="active glyphicon glyphicon-star gold"></i><span class="Roger"></span></th>
+                    <th>Romina <br><i class="active glyphicon glyphicon-star gold"></i><span class="Romina"></span></th>
+                    <th>Jehu <br><i class="active glyphicon glyphicon-star gold"></i><span class="Jehu"></span></th>
+                    <th>Marley <br><i class="active glyphicon glyphicon-star gold"></i><span class="Marley"></span></th>
+                    <th>Jorge <br><i class="active glyphicon glyphicon-star gold"></i><span class="Jorge"></span></th>
+                    <th>Lynzee <br><i class="active glyphicon glyphicon-star gold"></i><span class="Lynzee"></span></th>                    
+                    <th>Karla <br><i class="active glyphicon glyphicon-star gold"></i><span class="Karla"></span></th>
+                    <th>Erik <br><i class="active glyphicon glyphicon-star gold"></i><span class="Erik"></span></th>
+                    <th>Christian <br><i class="active glyphicon glyphicon-star gold"></i><span class="Christian"></span></th>
+                    <th>Ian <br><i class="active glyphicon glyphicon-star gold"></i><span class="Ian"></span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="scripture in scriptureMastery ">
+                    <td><a target="_blank" href="https://www.lds.org/scriptures/search?lang=eng&query={{scripture.verse}}">{{scripture.verse}}</a></td>
+                    <td class="Roger">
+                        <span data-ng-if="scripture.Roger === 0" class="active glyphicon glyphicon-star-empty" data-ng-click="setStarLevel(scripture.$id, 'Roger', 1)"></span>
+                        <span data-ng-if="scripture.Roger === 1" class="active glyphicon glyphicon-star" data-ng-click="setStarLevel(scripture.$id, 'Roger', 2)"></span>
+                        <span data-ng-if="scripture.Roger === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Roger', 0)"></span>
+                    </td>
+                    <td class="Romina">
+                        <span data-ng-if="scripture.Romina === 0" class="active glyphicon glyphicon-star-empty" data-ng-click="setStarLevel(scripture.$id, 'Romina', 1)"></span>
+                        <span data-ng-if="scripture.Romina === 1" class="active glyphicon glyphicon-star" data-ng-click="setStarLevel(scripture.$id, 'Romina', 2)"></span>
+                        <span data-ng-if="scripture.Romina === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Romina', 0)"></span>
+                    </td>
+                    <td class="Jehu">
+                        <span data-ng-if="scripture.Jehu === 0" class="active glyphicon glyphicon-star-empty" data-ng-click="setStarLevel(scripture.$id, 'Jehu', 1)"></span>
+                        <span data-ng-if="scripture.Jehu === 1" class="active glyphicon glyphicon-star" data-ng-click="setStarLevel(scripture.$id, 'Jehu', 2)"></span>
+                        <span data-ng-if="scripture.Jehu === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Jehu', 0)"></span>
+                    </td>
+                    <td class="Marley">
+                        <span data-ng-if="scripture.Marley === 0" class="active glyphicon glyphicon-star-empty" data-ng-click="setStarLevel(scripture.$id, 'Marley', 1)"></span>
+                        <span data-ng-if="scripture.Marley === 1" class="active glyphicon glyphicon-star" data-ng-click="setStarLevel(scripture.$id, 'Marley', 2)"></span>
+                        <span data-ng-if="scripture.Marley === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Marley', 0)"></span>
+                    </td>
+                    <td class="Jorge">
+                        <span data-ng-if="scripture.Jorge === 0" class="active glyphicon glyphicon-star-empty" data-ng-click="setStarLevel(scripture.$id, 'Jorge', 1)"></span>
+                        <span data-ng-if="scripture.Jorge === 1" class="active glyphicon glyphicon-star"  data-ng-click="setStarLevel(scripture.$id, 'Jorge', 2)"></span>
+                        <span data-ng-if="scripture.Jorge === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Jorge', 0)"></span>
+                    </td>
+                    <td class="Lynzee">
+                        <span data-ng-if="scripture.Lynzee === 0" class="active glyphicon glyphicon-star-empty"  data-ng-click="setStarLevel(scripture.$id, 'Lynzee', 1)"></span>
+                        <span data-ng-if="scripture.Lynzee === 1" class="active glyphicon glyphicon-star"  data-ng-click="setStarLevel(scripture.$id, 'Lynzee', 2)"></span>
+                        <span data-ng-if="scripture.Lynzee === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Lynzee', 0)"></span>
+                    </td>                    
+                    <td class="Karla">
+                        <span data-ng-if="scripture.Karla === 0" class="active glyphicon glyphicon-star-empty"  data-ng-click="setStarLevel(scripture.$id, 'Karla', 1)"></span>
+                        <span data-ng-if="scripture.Karla === 1" class="active glyphicon glyphicon-star"  data-ng-click="setStarLevel(scripture.$id, 'Karla', 2)"></span>
+                        <span data-ng-if="scripture.Karla === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Karla', 0)"></span>
+                    </td>
+                    <td class="Erik">
+                        <span data-ng-if="scripture.Erik === 0" class="active glyphicon glyphicon-star-empty"  data-ng-click="setStarLevel(scripture.$id, 'Erik', 1)"></span>
+                        <span data-ng-if="scripture.Erik === 1" class="active glyphicon glyphicon-star"  data-ng-click="setStarLevel(scripture.$id, 'Erik', 2)"></span>
+                        <span data-ng-if="scripture.Erik === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Erik', 0)"></span>
+                    </td>
+                    <td class="Christian">
+                        <span data-ng-if="scripture.Christian === 0" class="active glyphicon glyphicon-star-empty"  data-ng-click="setStarLevel(scripture.$id, 'Christian', 1)"></span>
+                        <span data-ng-if="scripture.Christian === 1" class="active glyphicon glyphicon-star"  data-ng-click="setStarLevel(scripture.$id, 'Christian', 2)"></span>
+                        <span data-ng-if="scripture.Christian === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Christian', 0)"></span>
+                    </td>
+                    <td class="Ian">
+                        <span data-ng-if="scripture.Ian === 0" class="active glyphicon glyphicon-star-empty"  data-ng-click="setStarLevel(scripture.$id, 'Ian', 1)"></span>
+                        <span data-ng-if="scripture.Ian === 1" class="active glyphicon glyphicon-star"  data-ng-click="setStarLevel(scripture.$id, 'Ian', 2)"></span>
+                        <span data-ng-if="scripture.Ian === 2" class="active glyphicon glyphicon-star gold" data-ng-click="setStarLevel(scripture.$id, 'Ian', 0)"></span>
+                    </td>                    
+                </tr>
+            </tbody>       
+            
+        </table>
+        
+        <div><i class="active glyphicon glyphicon-star"></i><span>Passed for Grade Requirement</span></div>
+        <div><i class="active glyphicon glyphicon-star gold"></i><span>Memorized for Scripture Mastery Award</span></div>
+	  </div>
+	</div>	
+</div>

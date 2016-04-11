@@ -47,6 +47,32 @@ seminaryServices.factory("seminaryDataService", ['$firebaseArray', '$q',
                 deferred.resolve(teams);
             }
             return deferred.promise;
+        },
+        getScriptureMastery: function() {
+            var ref = new Firebase("https://seminary.firebaseio.com/courses/ottm/scripturemastery");
+            var scriptureMastery = [];
+            // Creating a deferred object
+            var deferred = $q.defer();
+            if (scriptureMastery.length === 0) {
+
+                var scriptureMasteryData = $firebaseArray(ref);
+                scriptureMasteryData.$loaded().then(function(data) {
+                    scriptureMastery = data;
+                    deferred.resolve(data);
+                })
+                .catch(function(error) {
+                    console.log("Error:", error);
+                });
+            } else {
+                deferred.resolve(scriptureMastery);
+            }
+            return deferred.promise;
+        },
+        setScriptureMastery: function(scripture, student, starLevel) {
+            if (false) {
+                var ref = new Firebase("https://seminary.firebaseio.com/courses/ottm/scripturemastery/" + scripture);
+                ref.child(student).set(starLevel);
+            }
         }
     };
 }]);

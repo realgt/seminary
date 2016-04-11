@@ -67,3 +67,30 @@ seminaryControllers.controller("LessonDetailController", ['$scope', '$routeParam
         $scope.teams = data;
     });
 }]);
+
+seminaryControllers.controller("ScriptureMasteryController", ['$scope', 'seminaryDataService',
+  function($scope, seminaryDataService) {
+    seminaryDataService.getScriptureMastery().then(function(data){
+        $scope.scriptureMastery = data;
+        //set star levels
+        setTimeout(function() {
+            
+            $('span.Roger').text($(".Roger .gold").length);
+            $('span.Romina').text($(".Romina .gold").length);
+            $('span.Jehu').text($(".Jehu .gold").length);
+            $('span.Marley').text($(".Marley .gold").length);
+            $('span.Jorge').text($(".Jorge .gold").length);
+            $('span.Lynzee').text($(".Lynzee .gold").length);
+            $('span.Ian').text($(".Ian .gold").length);
+            $('span.Karla').text($(".Karla .gold").length);
+            $('span.Erik').text($(".Erik .gold").length);
+            $('span.Christian').text($(".Christian .gold").length);
+        },1000);
+        
+    });
+    
+    $scope.setStarLevel = function(scripture, student, starLevel) {
+        seminaryDataService.setScriptureMastery(scripture, student, starLevel);
+    };
+    
+}]);
