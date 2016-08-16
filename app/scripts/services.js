@@ -8,7 +8,7 @@ seminaryServices.factory("seminaryDataService", ['$firebaseArray', '$q',
 	    getData: function(daysOffset){
 	        var offsetDays = daysOffset || 0;
 	        var offset = 86400000 * offsetDays;
-	        var ref = new Firebase("https://seminary.firebaseio.com/courses/ottm/term/2/Days");
+	        var ref = new Firebase("https://seminary.firebaseio.com/courses/nttm/term/1/Days");
 	        
 	        var lessons = [] ;
 	    	// Creating a deferred object
@@ -90,7 +90,7 @@ seminaryServices.factory("Team", ["$firebaseObject",
 seminaryServices.factory("Lesson", ["$firebaseObject",
   function($firebaseObject) {
     return function(lessonId) {
-        var ref = new Firebase("https://seminary.firebaseio.com/courses/ottm/term/2/Days");//TODO add support for all four manuals
+        var ref = new Firebase("https://seminary.firebaseio.com/courses/nttm/term/1/Days");//TODO add support for all four manuals
         var lessonRef = ref.child(lessonId);
         
         return $firebaseObject(lessonRef);
