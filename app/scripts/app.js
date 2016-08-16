@@ -8,8 +8,11 @@ var seminaryApp = angular.module("seminaryApp", [
     "seminaryServices"
 ]);
 
-seminaryApp.config(['$routeProvider',
-  function($routeProvider) {
+seminaryApp.config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode({
+        enabled: true
+    });
 	$routeProvider.
 		when('/lessons', {
 			templateUrl: 'views/lesson-list.html',
