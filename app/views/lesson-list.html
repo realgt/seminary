@@ -11,8 +11,9 @@
                 <span data-ng-if="!lesson.Number">Doctrinal Mastery</span>
                 <a data-ng-if="lesson.Number" data-ng-href="/lessons/{{lesson.$id}}">{{lesson.Title}}</a>
             </h4>
-            <h5><small><em>{{weekday[lesson.DayOfWeek]}} {{lesson.DateDisplay}}</em></small> <small data-ng-if="lesson.team">Team {{lesson.team}}</small></h5> 
-            <p class="lead"> {{lesson.identifyDoctrine}}</p>
+            <h5><small><em>{{weekday[lesson.DayOfWeek]}} {{lesson.DateDisplay}}</em></small> </h5> 
+<!--            <small data-ng-if="lesson.team">Team {{lesson.team}}</small> -->
+<!--             <p class="lead"> {{lesson.identifyDoctrine}}</p> -->
             
             <hr class="muted">
         </div>
