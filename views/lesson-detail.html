@@ -1,0 +1,52 @@
+<div class="container" >
+    <div class="row">
+        <div class="col-xs-2 col-md-1">
+            <div class="circle"><a data-ng-href="/lessons/{{lesson.$id}}">{{lesson.Number}}</a></div>
+        </div>
+        <div class="col-xs-10 col-md-11">
+            <h1><small>{{lesson.Title}}</small></h1>
+        </div>
+    </div>
+    
+    
+    <p class="lead">{{lesson.identifyDoctrine}}</p>
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="lessonDate">Lesson Date</label>
+            <input type="text" id="lessonDate" class="form-control" data-ng-model="lesson.DateDisplay"></input>
+        </div>
+<!--         <div class="form-group"> -->
+<!--             <label for="lessonTeam">Assigned Team</label> -->
+<!--             <select id="lessonTeam" class="form-control" data-ng-model="lesson.team"> -->
+<!--                 <option data-ng-repeat="team in teams" value="{{team.name}}">{{team.name}}</option> -->
+<!--             </select> -->
+        </div>
+    </form>
+    <form>
+<!--         <div class="form-group"> -->
+<!--             <label for="identifyDoctrine">1. Write down a doctrine or principle from the lesson (usually found in bold letters).</label> -->
+<!--             <textarea id="identifyDoctrine" class="form-control" data-ng-model="lesson.identifyDoctrine" rows="3"></textarea> -->
+<!--         </div> -->
+        
+<!--         <div class="form-group"> -->
+<!--             <label for="understandDoctrine">2. Develop your understanding of the principle.</label> -->
+<!--             <div class="small-text">Analyze the meaning of the principle by asking the class relevant questions and searching for answers.</div> -->
+<!--             <textarea id="understandDoctrine" class="form-control" data-ng-model="lesson.understandDoctrine" rows="3"></textarea> -->
+<!--         </div> -->
+        
+<!--         <div class="form-group"> -->
+<!--             <label for="importanceOfDoctrine">3. Help the class feel the truth and importance of the principle.</label> -->
+<!--             <div class="small-text">Reflect on the impact the principle has had in your life or in the lives of others.  -->
+<!--             Can you think of individuals from the scriptures whose lives and testimonies declare the truth of this principle? -->
+<!--             Consider asking why this doctrine is important in our lives.</div> -->
+<!--             <textarea id="importanceOfDoctrine" class="form-control" data-ng-model="lesson.importanceOfDoctrine" rows="3"></textarea> -->
+<!--         </div> -->
+        
+<!--         <div class="form-group"> -->
+<!--             <label for="applyDoctrine">4. Apply the principle.</label> -->
+<!--             <div class="small-text">Consider what specific action you should take to apply the doctrine or principle in your life. -->
+<!--               Invite the class to apply the principle in their life.</div> -->
+<!--             <textarea id="applyDoctrine" class="form-control" data-ng-model="lesson.applyDoctrine" rows="3"></textarea> -->
+<!--         </div> -->
+    </form>
+</div>

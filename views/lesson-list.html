@@ -1,0 +1,22 @@
+<div class="container">
+	<h1>Lessons</h1>
+    <div class="clearfix" data-ng-repeat="lesson in lessons ">
+	   <div class="row">
+        <div class="col-xs-2 col-md-1">
+            <span data-ng-if="!lesson.Number"><img class="app-icon" src="images/scripture-mastery.jpg"></span>
+            <div data-ng-if="lesson.Number" class="circle"><a data-ng-href="/lessons/{{lesson.$id}}">{{lesson.Number}}</a></div>
+        </div>
+        <div class="col-xs-10 col-md-11">
+            <h4>
+                <span data-ng-if="!lesson.Number">Doctrinal Mastery</span>
+                <a data-ng-if="lesson.Number" data-ng-href="/lessons/{{lesson.$id}}">{{lesson.Title}}</a>
+            </h4>
+            <h5><small><em>{{weekday[lesson.DayOfWeek]}} {{lesson.DateDisplay}}</em></small> </h5> 
+<!--            <small data-ng-if="lesson.team">Team {{lesson.team}}</small> -->
+<!--             <p class="lead"> {{lesson.identifyDoctrine}}</p> -->
+            
+            <hr class="muted">
+        </div>
+	  </div>
+	</div>	
+</div>

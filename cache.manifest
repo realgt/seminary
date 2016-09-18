@@ -1,0 +1,35 @@
+CACHE MANIFEST
+#REV 18
+
+index.html
+views/lesson-detail.html
+views/seminary-index.html
+views/lesson-list.html
+views/team-list.html
+views/team-detail.html
+views/scripturemastery.html
+
+styles/style.css
+styles/vendor.css
+
+
+scripts/app.js
+scripts/controllers.js
+scripts/services.js
+scripts/vendor.js
+
+images/twitter.png
+images/instagram.png
+images/logo.png
+images/logo-desktop.png
+images/youtube.png
+images/scripture-mastery.jpg
+
+fonts/glyphicons-halflings-regular.woff2
+fonts/glyphicons-halflings-regular.woff
+fonts/glyphicons-halflings-regular.ttf
+fonts/glyphicons-halflings-regular.svg
+fonts/glyphicons-halflings-regular.eot
+
+NETWORK:
+*

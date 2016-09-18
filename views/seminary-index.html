@@ -1,0 +1,34 @@
+<div class="visible-xs-block col-xs-12 center-block">
+  <img class="hero img-responsive center-block" src="images/logo.png" />
+</div>
+<div class="hidden-xs col-md-12 center-block">
+   <img class="hero-desktop img-responsive center-block" src="images/logo-desktop.png" />
+ </div>
+<div class="container">
+	<div class="text-center center-block clearfix">
+<!--         <button class="btn btn-default" data-ng-click="login()">Login with Google</button> -->
+    </div>
+    <br clear="all">
+<!--     <div class="embed-responsive embed-responsive-16by9"><iframe allowfullscreen="" frameborder="0" height="400" src="https://www.youtube.com/embed/videoseries?list=PLQUCTI9_QLkzs_GEulF2OV_06nDlH_BeO;rel=0;autoplay=0;showinfo=0;controls=1" width="747"></iframe></div> -->
+    <h2><a href="/lessons">Upcoming Lessons</a></h2>
+    <div class="clearfix" data-ng-repeat="lesson in lessons | limitTo: 5">
+        <div class="row">
+        <div class="col-xs-2 col-md-1">
+            <span data-ng-if="!lesson.Number"><img class="app-icon" src="images/scripture-mastery.jpg"></span>
+            <div data-ng-if="lesson.Number" class="circle"><a data-ng-href="/lessons/{{lesson.$id}}">{{lesson.Number}}</a></div>
+        </div>
+        <div class="col-xs-10 col-md-11">
+            <h4>
+                <span data-ng-if="!lesson.Number">Doctrinal Mastery</span>
+                <a data-ng-if="lesson.Number" data-ng-href="/lessons/{{lesson.$id}}">{{lesson.Title}}</a>
+
+            </h4>
+            <h5><small><em>{{weekday[lesson.DayOfWeek]}} {{lesson.DateDisplay}}</em></small> </h5> 
+<!--             <small data-ng-if="lesson.team">Team {{lesson.team}}</small> -->
+<!--             <p class="lead"> {{lesson.identifyDoctrine}}</p> -->
+            <hr class="muted">
+        </div>
+      </div>
+    </div>
+</div>
+

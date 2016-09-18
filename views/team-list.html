@@ -1,0 +1,8 @@
+<div class="container">
+	<h1>Teams</h1>
+	<div>
+	  <div class="clearfix" data-ng-repeat="team in teams">
+        <a data-ng-href="/teams/{{team.$id}}"><h4>Team {{team.name}} <small>{{team.members}}</small></h4></a>
+	  </div>
+	</div>	
+</div>
