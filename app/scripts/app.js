@@ -45,6 +45,9 @@ seminaryApp.config(['$routeProvider', '$locationProvider',
 			templateUrl: 'views/seminary-index.html',
 			controller: 'SeminaryIndexController'
 		}).
+		when('/project', {
+			templateUrl: 'views/project.html'
+		}).
 		otherwise({
 	        redirectTo: '/index'
 	      });
